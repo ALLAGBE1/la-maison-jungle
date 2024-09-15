@@ -23,7 +23,8 @@ export const plantList = [
 	{
 		name: 'olivier',
 		category: 'extérieur',
-		id: '5pl'
+		id: '5pl',
+		isAvailable: false
 	},
 	{
 		name: 'géranium',

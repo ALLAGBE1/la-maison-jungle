@@ -1,0 +1,36 @@
+import CareScale from './CareScale'
+import '../styles/PlantItem.css'
+
+function handleClick(e){
+    // alert(`Vous voulez acheter 1 ${plantName} ? Très bon choix 🥀✨`)
+    console.log('✨ Ceci est mon event :', e)
+}
+
+function PlantItem({ id, cover, name, water, light }) {
+	return (
+		<li key={id} className='lmj-plant-item' /*onClick={handleClick}*/ onClick={() => handleClick(name)} >
+			<img className='lmj-plant-item-cover' src={cover} alt={`${name} cover`} />
+			{name}
+			<div>
+				<CareScale careType='water' scaleValue={water} />
+				<CareScale careType='light' scaleValue={light} />
+			</div>
+		</li>
+	)
+}
+
+export default PlantItem
+
+
+
+
+// import CareScale from "./CareScale"
+
+// function PlantItem({ light, water}) {
+//     return <div>
+//         <p>Bonjour je suis ...</p>
+//         <CareScale light={light} water={water} />
+//     </div>
+// }
+
+// export default PlantItem
